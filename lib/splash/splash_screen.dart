@@ -10,8 +10,8 @@ class SplashScreen extends StatelessWidget {
     return Scaffold(
       body: Center(
         child: Image.asset(
-            appAssets?.splash != null ? appAssets!.splash! : Res.logo,
-            package: appAssets?.splash == null ? 'vvt_base' : null),
+            appAssets?.logo != null ? appAssets!.logo! : Res.logo,
+            package: appAssets?.logo == null ? 'vvt_base' : null),
       ),
     );
   }
