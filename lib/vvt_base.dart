@@ -1,6 +1,7 @@
 library vvt_base;
 
 import 'package:flutter/material.dart';
+import 'package:vvt_base/splash/splash_screen.dart';
 
 class MyApp extends StatelessWidget {
   final String appTitle;
@@ -15,16 +16,7 @@ class MyApp extends StatelessWidget {
             colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
             useMaterial3: true,
           ),
-      home: const MyHomePage(),
+      home: const SplashScreen(),
     );
-  }
-}
-
-class MyHomePage extends StatelessWidget {
-  const MyHomePage({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return const Placeholder();
   }
 }
