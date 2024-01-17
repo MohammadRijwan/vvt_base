@@ -3,7 +3,7 @@ import 'package:vvt_base/res.dart';
 import 'package:vvt_base/util/app_assets.dart';
 
 class SplashScreen extends StatelessWidget {
-  const SplashScreen({Key? key}) : super(key: key);
+  const SplashScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -18,14 +18,15 @@ class SplashScreen extends StatelessWidget {
                   package: appAssets?.logo == null ? 'vvt_base' : null),
             ),
             ElevatedButton(
-                onPressed: () {
-                  Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => const Home(),
-                      ));
-                },
-                child: const Text('Home')),
+              onPressed: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const Home(),
+                    ));
+              },
+              child: const Text('Home'),
+            ),
           ],
         ),
       ),
