@@ -14,8 +14,11 @@ class SplashScreen extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: Image.asset(
-                  appAssets?.logo != null ? appAssets!.logo! : Res.logo,
-                  package: appAssets?.logo == null ? 'vvt_base' : null),
+                appAssets?.logo != null ? appAssets!.logo! : Res.logo,
+                package: appAssets?.logo == null ? 'vvt_base' : null,
+                width: 100,
+                height: 100,
+              ),
             ),
             ElevatedButton(
               onPressed: () {
@@ -39,8 +42,9 @@ class Home extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Center(
+    return const Scaffold(
+        body: Center(
       child: Text('Home'),
-    );
+    ));
   }
 }
